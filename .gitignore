@@ -1,0 +1,13 @@
+*.jpg
+*.png
+server
+client
+test-server
+test-multi
+test-multi-disabled
+test-push
+test-push-disabled
+test-multi-results
+test-multi-disabled-results
+test-push-results
+test-push-disabled-results

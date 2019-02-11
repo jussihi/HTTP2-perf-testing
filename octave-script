@@ -1,0 +1,32 @@
+1;
+
+load("test-multi-results")
+load("test-multi-disabled-results")
+load("test-push-results")
+load("test-push-disabled-results")
+
+figure(1)
+
+subplot(2, 1, 1)
+hist(test_multi_results, 30)
+xlabel("Total latency")
+ylabel("Frequency 1/1000")
+title("HTTP/2 multiplexing enabled")
+subplot(2, 1, 2)
+hist(test_multi_disabled_results, 30)
+xlabel("Total latency")
+ylabel("Frequency 1/1000")
+title("HTTP/1 with 10 concurrent connections")
+
+figure(2)
+
+subplot(2, 1, 1)
+hist(test_push_results, 30)
+xlabel("Total latency")
+ylabel("Frequency 1/1000")
+title("HTTP/2 server push enabled")
+subplot(2, 1, 2)
+hist(test_push_disabled_results, 30)
+xlabel("Total latency")
+ylabel("Frequency 1/1000")
+title("HTTP/2 server push disabled")
